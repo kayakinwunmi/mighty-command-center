@@ -1,0 +1,5 @@
+{
+  "buildCommand": "python3 generate-data.py || true",
+  "outputDirectory": "public",
+  "framework": null
+}

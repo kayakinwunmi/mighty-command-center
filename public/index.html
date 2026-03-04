@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Mighty Command Center</title>
+<style>
+/* ═══════════════════════════════════════════════
+   MIGHTY COMMAND CENTER — CSS
+   ═══════════════════════════════════════════════ */
+
+:root {
+  --bg-deep: #0a0f1a;
+  --bg-card: #131a2b;
+  --bg-card-hover: #1a2240;
+  --bg-glass: rgba(19, 26, 43, 0.7);
+  --border-glass: rgba(255, 255, 255, 0.06);
+  --green: #00d68f;
+  --green-dim: rgba(0, 214, 143, 0.15);
+  --amber: #ffaa00;
+  --amber-dim: rgba(255, 170, 0, 0.15);
+  --red: #ff3d71;
+  --red-dim: rgba(255, 61, 113, 0.12);
+  --blue: #3366ff;
+  --blue-dim: rgba(51, 102, 255, 0.15);
+  --purple: #a855f7;
+  --text-primary: #ffffff;
+  --text-secondary: #8f9bb3;
+  --text-muted: #5a6580;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 4px; }
+
+/* Layout */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 16px 100px;
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+@media (min-width: 1024px) {
+  .container { max-width: 960px; }
+}
+
+/* ── Loading ── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.loading-screen.hidden { opacity: 0; visibility: hidden; }
+.loading-spinner {
+  width: 40px; height: 40px;
+  border: 3px solid var(--border-glass);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, var(--bg-deep) 70%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.header-left h1 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  background: linear-gradient(135deg, #fff 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header-left .subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.avatar {
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0 0 2px var(--bg-deep), 0 0 0 3px rgba(51, 102, 255, 0.3);
+}
+
+/* ── Section ── */
+.section {
+  margin-top: 28px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section.visible { opacity: 1; transform: translateY(0); }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.section-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.section-header .badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.badge-red { background: var(--red-dim); color: var(--red); }
+.badge-amber { background: var(--amber-dim); color: var(--amber); }
+.badge-green { background: var(--green-dim); color: var(--green); }
+.badge-blue { background: var(--blue-dim); color: var(--blue); }
+
+/* ── Card ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(10px);
+  transition: background 0.2s, transform 0.15s;
+}
+.card:hover { background: var(--bg-card-hover); }
+.card:active { transform: scale(0.985); }
+
+/* ── Q1 Countdown ── */
+.q1-hero {
+  text-align: center;
+  padding: 32px 16px 24px;
+  background: linear-gradient(180deg, rgba(51,102,255,0.08) 0%, transparent 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-glass);
+  position: relative;
+  overflow: hidden;
+}
+.q1-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(51,102,255,0.04) 0%, transparent 70%);
+  animation: pulse-bg 4s ease-in-out infinite;
+}
+@keyframes pulse-bg { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+.q1-ring-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 16px;
+}
+.q1-ring-container svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.q1-ring-bg { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 8; }
+.q1-ring-progress {
+  fill: none;
+  stroke: url(#ringGradient);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 408;
+  stroke-dashoffset: 408;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+.q1-days {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.q1-days .num {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1;
+  background: linear-gradient(180deg, #fff 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.q1-days .label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+.q1-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.goal-pills {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.goal-pill {
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Cost of Inaction ── */
+.cost-section {
+  background: linear-gradient(180deg, rgba(255,61,113,0.06) 0%, transparent 100%);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,61,113,0.15);
+  padding: 20px 16px;
+}
+.cost-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.cost-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--red);
+}
+.cost-total {
+  font-size: 11px;
+  color: var(--red);
+  background: var(--red-dim);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.cost-card {
+  background: rgba(255,61,113,0.06);
+  border: 1px solid rgba(255,61,113,0.1);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.cost-card .pulse-dot {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,61,113,0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(255,61,113,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,61,113,0); }
+}
+.cost-card .type-badge {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.cost-card .deal-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.cost-card .meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.cost-card .meta span { display: flex; align-items: center; gap: 4px; }
+.cost-card .impact {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  font-style: italic;
+}
+
+/* ── Pipeline ── */
+.pipeline-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.pipeline-stage {
+  min-width: 200px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+.stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 4px;
+}
+.stage-name {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.stage-count {
+  font-size: 11px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.pipeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pipeline-card:hover { background: var(--bg-card-hover); }
+.pipeline-card.stalled {
+  border-color: rgba(255,61,113,0.2);
+  background: rgba(255,61,113,0.04);
+}
+.pipeline-card .company {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.pipeline-card .contact {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+.pipeline-card .days-badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+.pipeline-card .detail {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border-glass);
+  display: none;
+}
+.pipeline-card.expanded .detail { display: block; }
+
+/* ── Goals ── */
+.goal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 10px;
+}
+.goal-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.goal-name {
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+  margin-right: 8px;
+}
+.priority-badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.progress-bar-container {
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.progress-bar {
+  height: 100%;
+  border-radius: 3px;
+  width: 0;
+  transition: width 1.2s ease-out;
+}
+.progress-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.kr-list { list-style: none; }
+.kr-item {
+  font-size: 12px;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+.kr-check {
+  width: 14px; height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 9px;
+}
+.kr-check.done { background: var(--green); border-color: var(--green); color: #fff; }
+
+/* ── Relationship Radar ── */
+.radar-container {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
+.radar-svg {
+  width: 100%;
+  height: 100%;
+}
+.radar-ring {
+  fill: none;
+  stroke: rgba(255,255,255,0.05);
+  stroke-width: 1;
+}
+.radar-label {
+  font-size: 9px;
+  fill: var(--text-muted);
+  text-anchor: middle;
+}
+.radar-dot {
+  cursor: pointer;
+  transition: r 0.2s;
+}
+.radar-dot:hover { r: 7; }
+
+.radar-tooltip {
+  position: absolute;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+  white-space: nowrap;
+  box-shadow: var(--shadow-lg);
+}
+.radar-tooltip.show { opacity: 1; }
+.radar-tooltip .tt-name { font-weight: 600; margin-bottom: 2px; }
+.radar-tooltip .tt-days { color: var(--text-secondary); font-size: 11px; }
+.radar-tooltip .tt-ctx { color: var(--text-muted); font-size: 10px; margin-top: 2px; }
+
+.radar-summary {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.cooling-list { margin-top: 12px; }
+.cooling-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+.cooling-item .ci-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cooling-item .ci-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cooling-item .ci-name { font-size: 13px; font-weight: 500; }
+.cooling-item .ci-ctx { font-size: 11px; color: var(--text-muted); }
+.cooling-item .ci-days {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Follow-ups / Open Loops ── */
+.loops-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+}
+.loops-tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text-secondary);
+}
+.loops-tab.active { background: var(--bg-card); color: var(--text-primary); }
+
+.loop-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+.loop-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.loop-content { flex: 1; min-width: 0; }
+.loop-content .lc-what {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.loop-content .lc-who { font-size: 11px; color: var(--text-secondary); }
+.loop-status {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ── Key Dates ── */
+.timeline { position: relative; padding-left: 20px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue), var(--purple), transparent);
+  border-radius: 1px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+.timeline-item.business::before { border-color: var(--blue); background: var(--bg-deep); }
+.timeline-item.personal::before { border-color: var(--purple); background: var(--bg-deep); }
+.timeline-item.compliance::before { border-color: var(--amber); background: var(--bg-deep); }
+.timeline-item.deadline::before { border-color: var(--red); background: var(--bg-deep); }
+
+.timeline-date {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.timeline-event {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.timeline-notes {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ── Tasks ── */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+.task-priority {
+  width: 4px;
+  height: 28px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.task-info { flex: 1; min-width: 0; }
+.task-name {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.task-meta { font-size: 11px; color: var(--text-secondary); }
+.task-due {
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ── Stats Bar ── */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 28px;
+}
+@media (min-width: 480px) { .stats-bar { grid-template-columns: repeat(4, 1fr); } }
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  text-align: center;
+}
+.stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+.stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* ── Empty State ── */
+.empty-state {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeInUp 0.4s ease forwards; }
+
+/* Stagger delays */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+</style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-spinner"></div>
+</div>
+
+<div class="container" id="app">
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <h1>Mighty Command Center</h1>
+      <div class="subtitle" id="headerTime"></div>
+    </div>
+    <div class="avatar">KA</div>
+  </header>
+
+  <!-- Q1 Countdown -->
+  <section class="section" id="q1Section">
+    <div class="q1-hero">
+      <div class="q1-ring-container">
+        <svg viewBox="0 0 140 140">
+          <defs>
+            <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3366ff"/>
+              <stop offset="50%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#ff3d71"/>
+            </linearGradient>
+          </defs>
+          <circle class="q1-ring-bg" cx="70" cy="70" r="65"/>
+          <circle class="q1-ring-progress" id="q1Ring" cx="70" cy="70" r="65"/>
+        </svg>
+        <div class="q1-days">
+          <div class="num" id="q1Days">—</div>
+          <div class="label">Days Left</div>
+        </div>
+      </div>
+      <div class="q1-sub" id="q1Sub"></div>
+      <div class="goal-pills" id="goalPills"></div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar" id="statsBar"></div>
+
+  <!-- Cost of Inaction -->
+  <section class="section" id="costSection">
+    <div class="cost-section">
+      <div class="cost-header">
+        <h2>⚠ Cost of Inaction</h2>
+        <span class="cost-total" id="costTotal"></span>
+      </div>
+      <div id="costCards"></div>
+    </div>
+  </section>
+
+  <!-- Pipeline -->
+  <section class="section" id="pipelineSection">
+    <div class="section-header">
+      <h2>Pipeline Pulse</h2>
+      <span class="badge badge-blue" id="pipelineCount"></span>
+    </div>
+    <div class="pipeline-scroll" id="pipelineScroll"></div>
+  </section>
+
+  <!-- Goals -->
+  <section class="section" id="goalsSection">
+    <div class="section-header">
+      <h2>Goal Tracker</h2>
+      <span class="badge badge-amber" id="goalCount"></span>
+    </div>
+    <div id="goalCards"></div>
+  </section>
+
+  <!-- Relationship Radar -->
+  <section class="section" id="radarSection">
+    <div class="section-header">
+      <h2>Relationship Radar</h2>
+      <span class="badge badge-red" id="radarBadge"></span>
+    </div>
+    <div class="radar-container" id="radarContainer">
+      <svg class="radar-svg" id="radarSvg" viewBox="0 0 340 340"></svg>
+      <div class="radar-tooltip" id="radarTooltip">
+        <div class="tt-name"></div>
+        <div class="tt-days"></div>
+        <div class="tt-ctx"></div>
+      </div>
+    </div>
+    <div class="radar-summary" id="radarSummary"></div>
+    <div class="cooling-list" id="coolingList"></div>
+  </section>
+
+  <!-- Tasks -->
+  <section class="section" id="tasksSection">
+    <div class="section-header">
+      <h2>Tasks</h2>
+      <span class="badge" id="tasksBadge"></span>
+    </div>
+    <div id="tasksList"></div>
+  </section>
+
+  <!-- Open Loops -->
+  <section class="section" id="loopsSection">
+    <div class="section-header">
+      <h2>Open Loops</h2>
+    </div>
+    <div class="loops-tabs">
+      <div class="loops-tab active" data-tab="owed" onclick="switchLoopTab('owed')">Owed to You</div>
+      <div class="loops-tab" data-tab="you-owe" onclick="switchLoopTab('you-owe')">You Owe</div>
+    </div>
+    <div id="loopsContent"></div>
+  </section>
+
+  <!-- Key Dates -->
+  <section class="section" id="datesSection">
+    <div class="section-header">
+      <h2>Key Dates</h2>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════
+   MIGHTY COMMAND CENTER — JS
+   ═══════════════════════════════════════════════ */
+
+let DATA = null;
+let currentLoopTab = 'owed';
+
+async function init() {
+  try {
+    const res = await fetch('data.json');
+    DATA = await res.json();
+    render();
+    document.getElementById('loadingScreen').classList.add('hidden');
+    observeSections();
+  } catch (e) {
+    console.error('Failed to load data:', e);
+    document.getElementById('loadingScreen').innerHTML = '<div style="text-align:center;color:#8f9bb3;font-size:14px;">Failed to load data.<br><small>Run generate-data.py first.</small></div>';
+  }
+}
+
+function render() {
+  renderHeader();
+  renderQ1();
+  renderStats();
+  renderCostOfInaction();
+  renderPipeline();
+  renderGoals();
+  renderRadar();
+  renderTasks();
+  renderLoops();
+  renderDates();
+}
+
+function renderHeader() {
+  const now = new Date();
+  const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const generated = new Date(DATA.generated_at);
+  const minsAgo = Math.round((now - generated) / 60000);
+  const timeStr = minsAgo < 60 ? `${minsAgo}m ago` : `${Math.round(minsAgo/60)}h ago`;
+  document.getElementById('headerTime').textContent =
+    `${now.toLocaleDateString('en-GB', opts)} · Updated ${timeStr}`;
+}
+
+function renderQ1() {
+  const q = DATA.q1_countdown;
+  document.getElementById('q1Days').textContent = q.days_remaining;
+  document.getElementById('q1Sub').textContent =
+    `${q.weeks_remaining} weeks · Q1 ends ${new Date(q.end_date).toLocaleDateString('en-GB', { month: 'short', day: 'numeric' })}`;
+
+  // Animate ring
+  const ring = document.getElementById('q1Ring');
+  const circumference = 2 * Math.PI * 65;
+  const offset = circumference - (q.progress_pct / 100) * circumference;
+  setTimeout(() => { ring.style.strokeDashoffset = offset; }, 300);
+
+  // Goal pills
+  const goals = DATA.goals.filter(g => !g.is_personal);
+  const complete = goals.filter(g => g.status === 'complete').length;
+  const onTrack = goals.filter(g => g.status === 'on_track').length;
+  const atRisk = goals.filter(g => g.risk_level === 'high').length;
+
+  const pills = document.getElementById('goalPills');
+  const pillData = [
+    { emoji: '✅', label: `${complete} complete`, cls: 'badge-green' },
+    { emoji: '🟡', label: `${onTrack} on track`, cls: 'badge-amber' },
+    { emoji: '🔴', label: `${atRisk} at risk`, cls: 'badge-red' },
+  ];
+  pills.innerHTML = pillData.map(p =>
+    `<span class="goal-pill ${p.cls}">${p.emoji} ${p.label}</span>`
+  ).join('');
+}
+
+function renderStats() {
+  const s = DATA.stats;
+  const bar = document.getElementById('statsBar');
+  const stats = [
+    { num: s.deals_in_motion + s.live_clients, label: 'Active Deals', color: 'var(--blue)' },
+    { num: s.stalled_deals, label: 'Stalled', color: 'var(--red)' },
+    { num: s.cooling_relationships, label: 'Cooling', color: 'var(--amber)' },
+    { num: s.completed_tasks, label: 'Done', color: 'var(--green)' },
+  ];
+  bar.innerHTML = stats.map(s =>
+    `<div class="stat-card">
+      <div class="stat-num" style="color:${s.color}">${s.num}</div>
+      <div class="stat-label">${s.label}</div>
+    </div>`
+  ).join('');
+}
+
+function renderCostOfInaction() {
+  const items = DATA.cost_of_inaction;
+  document.getElementById('costTotal').textContent = `${items.length} items at risk`;
+
+  const cards = document.getElementById('costCards');
+  cards.innerHTML = items.map((item, i) => {
+    const typeLabels = {
+      stalled_deal: 'STALLED DEAL',
+      cooling_relationship: 'COOLING RELATIONSHIP',
+      at_risk_goal: 'AT-RISK GOAL',
+    };
+    return `<div class="cost-card animate-in delay-${Math.min(i+1, 5)}">
+      ${item.days_stalled > 30 ? '<div class="pulse-dot"></div>' : ''}
+      <div class="type-badge">${typeLabels[item.type] || item.type}</div>
+      <div class="deal-name">${item.name}</div>
+      <div class="meta">
+        ${item.contact !== '—' ? `<span>👤 ${item.contact}</span>` : ''}
+        ${item.days_stalled > 0 ? `<span>⏱ ${item.days_stalled}d stalled</span>` : ''}
+        <span>💰 ${item.estimated_value}</span>
+      </div>
+      <div class="impact">${item.what_you_lose}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderPipeline() {
+  const p = DATA.pipeline;
+  const stages = [
+    { key: 'lead', name: 'Lead', items: p.lead || [] },
+    { key: 'engaged', name: 'Engaged', items: p.engaged || [] },
+    { key: 'negotiation', name: 'Negotiation', items: p.negotiation || [] },
+    { key: 'onboarding', name: 'Onboarding', items: p.onboarding || [] },
+    { key: 'live', name: 'Live', items: p.live || [] },
+    { key: 'stalled', name: 'Stalled', items: p.stalled || [] },
+  ];
+
+  const total = stages.reduce((s, st) => s + st.items.length, 0);
+  document.getElementById('pipelineCount').textContent = `${total} deals`;
+
+  const scroll = document.getElementById('pipelineScroll');
+  scroll.innerHTML = stages.filter(s => s.items.length > 0).map(stage => {
+    const cards = stage.items.map(item => {
+      const isStalled = stage.key === 'stalled' || (item.days_in_stage && item.days_in_stage > 21);
+      const days = item.days_in_stage;
+      const daysColor = !days ? '' : days > 30 ? 'var(--red)' : days > 14 ? 'var(--amber)' : 'var(--green)';
+      const daysBg = !days ? '' : days > 30 ? 'var(--red-dim)' : days > 14 ? 'var(--amber-dim)' : 'var(--green-dim)';
+
+      return `<div class="pipeline-card ${isStalled ? 'stalled' : ''}" onclick="this.classList.toggle('expanded')">
+        <div class="company">${item.company}</div>
+        <div class="contact">${item.contact || '—'}</div>
+        ${days ? `<span class="days-badge" style="color:${daysColor};background:${daysBg}">${days}d</span>` : ''}
+        <div class="detail">
+          ${item.next_action || item.health || item.issue || item.volume || ''}
+          ${item.flag ? `<br><strong>${item.flag}</strong>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+
+    return `<div class="pipeline-stage">
+      <div class="stage-header">
+        <span class="stage-name">${stage.name}</span>
+        <span class="stage-count">${stage.items.length}</span>
+      </div>
+      ${cards}
+    </div>`;
+  }).join('');
+}
+
+function renderGoals() {
+  const goals = DATA.goals.filter(g => !g.is_personal);
+  const personal = DATA.goals.filter(g => g.is_personal);
+
+  document.getElementById('goalCount').textContent = `${goals.length + personal.length} goals`;
+
+  const container = document.getElementById('goalCards');
+  const allGoals = [...goals, ...personal];
+
+  container.innerHTML = allGoals.map(g => {
+    const progressColor = g.progress >= 100 ? 'var(--green)' :
+      g.risk_level === 'high' ? 'var(--red)' :
+      g.risk_level === 'medium' ? 'var(--amber)' : 'var(--green)';
+    const priorityColor = g.priority === 'P1' ? 'var(--red)' :
+      g.priority === 'P2' ? 'var(--amber)' : 'var(--text-muted)';
+    const riskIcon = g.risk_level === 'high' ? '🔴' :
+      g.risk_level === 'medium' ? '🟡' : '🟢';
+
+    const krHtml = g.key_results && g.key_results.length > 0 ?
+      `<ul class="kr-list">${g.key_results.map(kr =>
+        `<li class="kr-item">
+          <span class="kr-check ${kr.done ? 'done' : ''}">${kr.done ? '✓' : ''}</span>
+          <span style="${kr.done ? 'text-decoration:line-through;opacity:0.5' : ''}">${kr.name}</span>
+        </li>`
+      ).join('')}</ul>` : '';
+
+    return `<div class="goal-card">
+      <div class="goal-top">
+        <div class="goal-name">${riskIcon} ${g.name}</div>
+        <span class="priority-badge" style="color:${priorityColor};background:${priorityColor}22">${g.priority}</span>
+      </div>
+      <div class="progress-label">
+        <span>${g.status.replace(/_/g, ' ')}</span>
+        <span>${g.progress}%</span>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="background:${progressColor}" data-width="${g.progress}"></div>
+      </div>
+      ${krHtml}
+    </div>`;
+  }).join('');
+}
+
+function renderRadar() {
+  const contacts = DATA.relationships.all || [];
+  const cooling = contacts.filter(c => c.health === 'cooling');
+  document.getElementById('radarBadge').textContent = `${cooling.length} need attention`;
+
+  const svg = document.getElementById('radarSvg');
+  const cx = 170, cy = 170;
+  const rings = [
+    { r: 50, label: 'Tier 1', tier: 1 },
+    { r: 100, label: 'Tier 2', tier: 2 },
+    { r: 145, label: 'Tier 3', tier: 3 },
+  ];
+
+  // Cross-hairs
+  let svgContent = `
+    <line x1="${cx}" y1="30" x2="${cx}" y2="310" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    <line x1="30" y1="${cy}" x2="310" y2="${cy}" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  `;
+
+  // Rings
+  rings.forEach(ring => {
+    svgContent += `<circle class="radar-ring" cx="${cx}" cy="${cy}" r="${ring.r}"/>`;
+    svgContent += `<text class="radar-label" x="${cx}" y="${cy - ring.r - 6}">${ring.label}</text>`;
+  });
+
+  // Place dots
+  const tierContacts = { 1: [], 2: [], 3: [] };
+  contacts.forEach(c => {
+    const t = c.tier || 3;
+    if (tierContacts[t]) tierContacts[t].push(c);
+  });
+
+  Object.entries(tierContacts).forEach(([tier, tContacts]) => {
+    const ring = rings.find(r => r.tier === parseInt(tier));
+    if (!ring) return;
+    const count = tContacts.length;
+    tContacts.forEach((c, i) => {
+      const angle = (i / count) * 2 * Math.PI - Math.PI / 2;
+      const jitter = (Math.random() - 0.5) * 20;
+      const x = cx + (ring.r + jitter) * Math.cos(angle);
+      const y = cy + (ring.r + jitter) * Math.sin(angle);
+      const color = c.health === 'cooling' ? '#ff3d71' : '#00d68f';
+      const opacity = c.health === 'cooling' ? 1 : 0.6;
+
+      svgContent += `<circle class="radar-dot" cx="${x}" cy="${y}" r="5" fill="${color}" opacity="${opacity}"
+        data-name="${c.name}" data-days="${c.days_since || '?'}" data-ctx="${c.context || ''}"
+        onmouseenter="showRadarTip(evt)" onmouseleave="hideRadarTip()"
+        ontouchstart="showRadarTip(evt)" />`;
+    });
+  });
+
+  svg.innerHTML = svgContent;
+
+  // Summary
+  document.getElementById('radarSummary').innerHTML =
+    `<strong>${cooling.length}</strong> of ${contacts.length} relationships need attention`;
+
+  // Cooling list (top contacts)
+  const list = document.getElementById('coolingList');
+  const topCooling = cooling.sort((a, b) => (b.days_since || 0) - (a.days_since || 0)).slice(0, 8);
+  list.innerHTML = topCooling.map(c => {
+    const daysColor = (c.days_since || 0) > 60 ? 'var(--red)' : 'var(--amber)';
+    return `<div class="cooling-item">
+      <div class="ci-left">
+        <div class="ci-dot" style="background:${daysColor}"></div>
+        <div>
+          <div class="ci-name">${c.name}</div>
+          <div class="ci-ctx">${c.context || `Tier ${c.tier}`}</div>
+        </div>
+      </div>
+      <div class="ci-days" style="color:${daysColor}">${c.days_since || '?'}d</div>
+    </div>`;
+  }).join('');
+}
+
+function showRadarTip(evt) {
+  const dot = evt.target;
+  const tip = document.getElementById('radarTooltip');
+  const container = document.getElementById('radarContainer');
+  const rect = container.getBoundingClientRect();
+  const dotRect = dot.getBoundingClientRect();
+
+  tip.querySelector('.tt-name').textContent = dot.dataset.name;
+  tip.querySelector('.tt-days').textContent = `${dot.dataset.days} days since contact`;
+  tip.querySelector('.tt-ctx').textContent = dot.dataset.ctx;
+
+  const x = dotRect.left - rect.left + 10;
+  const y = dotRect.top - rect.top - 50;
+  tip.style.left = Math.min(x, rect.width - 180) + 'px';
+  tip.style.top = Math.max(y, 0) + 'px';
+  tip.classList.add('show');
+}
+
+function hideRadarTip() {
+  document.getElementById('radarTooltip').classList.remove('show');
+}
+
+function renderTasks() {
+  const t = DATA.tasks;
+  const all = [
+    ...(t.overdue || []).map(x => ({ ...x, category: 'overdue' })),
+    ...(t.due_today || []).map(x => ({ ...x, category: 'today' })),
+    ...(t.upcoming || []).map(x => ({ ...x, category: 'upcoming' })),
+  ];
+
+  const badge = document.getElementById('tasksBadge');
+  if (t.overdue && t.overdue.length > 0) {
+    badge.className = 'badge badge-red';
+    badge.textContent = `${t.overdue.length} overdue`;
+  } else {
+    badge.className = 'badge badge-green';
+    badge.textContent = `${all.length} active`;
+  }
+
+  const container = document.getElementById('tasksList');
+  if (all.length === 0) {
+    container.innerHTML = '<div class="empty-state">No active tasks — all clear ✨</div>';
+    return;
+  }
+
+  container.innerHTML = all.map(task => {
+    const pColor = task.priority === 'P1' ? 'var(--red)' :
+      task.priority === 'P2' ? 'var(--amber)' : 'var(--text-muted)';
+    const catColor = task.category === 'overdue' ? 'var(--red)' :
+      task.category === 'today' ? 'var(--amber)' : 'var(--text-secondary)';
+    const catLabel = task.category === 'overdue' ? 'OVERDUE' :
+      task.category === 'today' ? 'TODAY' :
+      task.due ? new Date(task.due).toLocaleDateString('en-GB', { month: 'short', day: 'numeric' }) : '';
+
+    return `<div class="task-item">
+      <div class="task-priority" style="background:${pColor}"></div>
+      <div class="task-info">
+        <div class="task-name">${task.name}</div>
+        <div class="task-meta">${task.assignee || ''} · ${task.priority}</div>
+      </div>
+      <div class="task-due" style="color:${catColor}">${catLabel}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderLoops() {
+  const fu = DATA.follow_ups;
+  const content = document.getElementById('loopsContent');
+
+  if (currentLoopTab === 'owed') {
+    const items = fu.others_commitments || [];
+    if (items.length === 0) {
+      content.innerHTML = '<div class="empty-state">No pending commitments owed to you</div>';
+      return;
+    }
+    content.innerHTML = items.map(item =>
+      `<div class="loop-item">
+        <div class="loop-icon" style="background:var(--amber-dim);color:var(--amber)">⏳</div>
+        <div class="loop-content">
+          <div class="lc-what">${item.commitment}</div>
+          <div class="lc-who">From ${item.from_whom} · Due ${item.expected_by}</div>
+        </div>
+        <div class="loop-status" style="background:var(--amber-dim);color:var(--amber)">${item.status}</div>
+      </div>`
+    ).join('');
+  } else {
+    const items = fu.kays_commitments || [];
+    if (items.length === 0) {
+      content.innerHTML = '<div class="empty-state">No open commitments — you\'re clear 🎯</div>';
+      return;
+    }
+    content.innerHTML = items.map(item =>
+      `<div class="loop-item">
+        <div class="loop-icon" style="background:var(--red-dim);color:var(--red)">📤</div>
+        <div class="loop-content">
+          <div class="lc-what">${item.commitment}</div>
+          <div class="lc-who">To ${item.to_whom} · Due ${item.deadline}</div>
+        </div>
+        <div class="loop-status" style="background:var(--red-dim);color:var(--red)">${item.status}</div>
+      </div>`
+    ).join('');
+  }
+}
+
+function switchLoopTab(tab) {
+  currentLoopTab = tab;
+  document.querySelectorAll('.loops-tab').forEach(el => {
+    el.classList.toggle('active', el.dataset.tab === tab);
+  });
+  renderLoops();
+}
+
+function renderDates() {
+  const dates = DATA.key_dates || [];
+  const container = document.getElementById('timeline');
+
+  const upcoming = dates.filter(d => d.is_upcoming !== false).slice(0, 10);
+  if (upcoming.length === 0) {
+    container.innerHTML = '<div class="empty-state">No upcoming dates</div>';
+    return;
+  }
+
+  container.innerHTML = upcoming.map(d => {
+    const dateLabel = d.date && d.date.match(/^\d{4}-\d{2}-\d{2}$/)
+      ? new Date(d.date).toLocaleDateString('en-GB', { weekday: 'short', month: 'short', day: 'numeric' })
+      : d.date_raw || d.date;
+
+    return `<div class="timeline-item ${d.type}">
+      <div class="timeline-date">${dateLabel}</div>
+      <div class="timeline-event">${d.event}</div>
+      ${d.notes ? `<div class="timeline-notes">${d.notes}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+/* ── Intersection Observer for fade-in ── */
+function observeSections() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Animate progress bars inside
+        entry.target.querySelectorAll('.progress-bar').forEach(bar => {
+          const width = bar.dataset.width || 0;
+          setTimeout(() => { bar.style.width = width + '%'; }, 200);
+        });
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section').forEach(el => observer.observe(el));
+}
+
+/* ── Init ── */
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
