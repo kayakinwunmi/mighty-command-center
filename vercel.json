@@ -1,4 +1,5 @@
 {
+  "buildCommand": "echo 'Using pre-generated data'",
   "outputDirectory": "public",
   "framework": null
 }
