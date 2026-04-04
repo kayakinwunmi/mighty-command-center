@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-04-03T05:01:46.061613",
+  "generated_at": "2026-04-04T05:01:09.333190",
   "q1_countdown": {
     "days_remaining": 0,
     "end_date": "2026-03-31",
-    "weeks_remaining": -0.4,
-    "progress_pct": 103
+    "weeks_remaining": -0.6,
+    "progress_pct": 104
   },
   "cost_of_inaction": [
     {
       "type": "cooling_relationship",
       "name": "Nikolai Timofejev",
       "contact": "Nikolai Timofejev",
-      "days_stalled": 127,
+      "days_stalled": 128,
       "estimated_value": "Tier 1 relationship",
-      "what_you_lose": "No contact for 127 days \u2014 Montify / Servians / Pre Finance \u2014 Owner / Founder"
+      "what_you_lose": "No contact for 128 days \u2014 Montify / Servians / Pre Finance \u2014 Owner / Founder"
     },
     {
       "type": "stalled_deal",
@@ -51,17 +51,25 @@
       "type": "cooling_relationship",
       "name": "Esah Khan (also \"Issa\")",
       "contact": "Esah Khan (also \"Issa\")",
-      "days_stalled": 38,
+      "days_stalled": 39,
       "estimated_value": "Tier 1 relationship",
-      "what_you_lose": "No contact for 38 days \u2014 Mighty \u2014 MLRO / Chief Compliance Officer"
+      "what_you_lose": "No contact for 39 days \u2014 Mighty \u2014 MLRO / Chief Compliance Officer"
     },
     {
       "type": "cooling_relationship",
       "name": "Kunle Odekunle (also \"Kabir\")",
       "contact": "Kunle Odekunle (also \"Kabir\")",
-      "days_stalled": 37,
+      "days_stalled": 38,
       "estimated_value": "Tier 1 relationship",
-      "what_you_lose": "No contact for 37 days \u2014 Mighty \u2014 FX Trader"
+      "what_you_lose": "No contact for 38 days \u2014 Mighty \u2014 FX Trader"
+    },
+    {
+      "type": "cooling_relationship",
+      "name": "Contact: Benjamin W\u00fcrzburger",
+      "contact": "Contact: Benjamin W\u00fcrzburger",
+      "days_stalled": 26,
+      "estimated_value": "Tier 1 relationship",
+      "what_you_lose": "No contact for 26 days \u2014 Partner, Ceviant / CPUK"
     },
     {
       "type": "stalled_deal",
@@ -70,14 +78,6 @@
       "days_stalled": 25,
       "estimated_value": "$500K-2M annual",
       "what_you_lose": "\ud83d\udd34 STALLED \u2014 Schedule call post-return (11 Apr)."
-    },
-    {
-      "type": "cooling_relationship",
-      "name": "Contact: Benjamin W\u00fcrzburger",
-      "contact": "Contact: Benjamin W\u00fcrzburger",
-      "days_stalled": 25,
-      "estimated_value": "Tier 1 relationship",
-      "what_you_lose": "No contact for 25 days \u2014 Partner, Ceviant / CPUK"
     },
     {
       "type": "at_risk_goal",
@@ -487,189 +487,189 @@
     "cooling": [
       {
         "name": "Nikolai Timofejev",
-        "days_since": 127,
+        "days_since": 128,
         "tier": 1,
         "context": "Montify / Servians / Pre Finance \u2014 Owner / Founder",
         "company": "Montify / Servians / Pre Finance"
       },
       {
         "name": "Esah Khan (also \"Issa\")",
-        "days_since": 38,
+        "days_since": 39,
         "tier": 1,
         "context": "Mighty \u2014 MLRO / Chief Compliance Officer",
         "company": "Mighty"
       },
       {
         "name": "Kunle Odekunle (also \"Kabir\")",
-        "days_since": 37,
+        "days_since": 38,
         "tier": 1,
         "context": "Mighty \u2014 FX Trader",
         "company": "Mighty"
       },
       {
         "name": "Contact: Benjamin W\u00fcrzburger",
-        "days_since": 25,
+        "days_since": 26,
         "tier": 1,
         "context": "Partner, Ceviant / CPUK",
         "company": ""
       },
       {
         "name": "Daniel Okunlola",
-        "days_since": 206,
+        "days_since": 207,
         "tier": 2,
         "context": "Unknown (community / leadership space) \u2014 Entrepreneur / Community Leader",
         "company": "Unknown (community / leadership space)"
       },
       {
         "name": "Iyinoluwa \"Eni\" Soleye",
-        "days_since": 137,
+        "days_since": 138,
         "tier": 2,
         "context": "Mighty / Go Mighty \u2014 Junior FX Specialist",
         "company": "Mighty / Go Mighty"
       },
       {
         "name": "Boye Balogun",
-        "days_since": 126,
+        "days_since": 127,
         "tier": 2,
         "context": "More Than Ventures \u2014 Founder / Entrepreneur",
         "company": "More Than Ventures"
       },
       {
         "name": "Arpit Suhalka",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "context": "iFAST Global Bank \u2014 Relationship Manager / Business Development",
         "company": "iFAST Global Bank"
       },
       {
         "name": "Raj Khangura",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "context": "Independent (Regulatory/Compliance Advisory) \u2014 Compliance Advisor / Regulatory Consultant",
         "company": "Independent (Regulatory/Compliance Advisory)"
       },
       {
         "name": "Manoj Padhi",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "context": "iFAST Global Bank \u2014 Easy Remit Platform \u2014 Head of Cross-Border Vertical",
         "company": "iFAST Global Bank \u2014 Easy Remit Platform"
       },
       {
         "name": "Simon Skovgaard",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "context": "iFAST Global Bank \u2014 Business Development Executive",
         "company": "iFAST Global Bank"
       },
       {
         "name": "Mark (Montify Germany)",
-        "days_since": 101,
+        "days_since": 102,
         "tier": 2,
         "context": "Montify Germany \u2014 Financial Advisor / CFO-type",
         "company": "Montify Germany"
       },
       {
         "name": "Bode Bamkole",
-        "days_since": 90,
+        "days_since": 91,
         "tier": 2,
         "context": "Beyond Blood Motion \u2014 Founder / Elite Fitness Coach",
         "company": "Beyond Blood Motion"
       },
       {
         "name": "Jason Landrum",
-        "days_since": 88,
+        "days_since": 89,
         "tier": 2,
         "context": "Unknown (US EMI/banking infrastructure company) \u2014 Unknown (senior business development / partnerships)",
         "company": "Unknown (US EMI/banking infrastructure company)"
       },
       {
         "name": "Sarah Idahosa",
-        "days_since": 86,
+        "days_since": 87,
         "tier": 2,
         "context": "MANSA \u2014 Partnership and Community Growth Manager",
         "company": "MANSA"
       },
       {
         "name": "Andrei Arnautu",
-        "days_since": 73,
+        "days_since": 74,
         "tier": 2,
         "context": "Clear Junction \u2014 Business Development / Partnerships (sent follow-up email)",
         "company": "Clear Junction"
       },
       {
         "name": "Betul Erdogan",
-        "days_since": 56,
+        "days_since": 57,
         "tier": 2,
         "context": "Sokin \u2014 Implementation Lead",
         "company": "Sokin"
       },
       {
         "name": "Funkola Odeleye",
-        "days_since": 45,
+        "days_since": 46,
         "tier": 2,
         "context": "TLP Advisory (formerly The Lunga Practice) \u2014 Partner",
         "company": "TLP Advisory (formerly The Lunga Practice)"
       },
       {
         "name": "Contact: Henry Longe",
-        "days_since": 43,
+        "days_since": 44,
         "tier": 2,
         "context": "TLP Advisory",
         "company": ""
       },
       {
         "name": "Contact: Habeeb Ogundiran",
-        "days_since": 43,
+        "days_since": 44,
         "tier": 2,
         "context": "Ceviant",
         "company": ""
       },
       {
         "name": "Contact: Callum Whittaker",
-        "days_since": 42,
+        "days_since": 43,
         "tier": 2,
         "context": "IFX Payments",
         "company": ""
       },
       {
         "name": "Tola Alade",
-        "days_since": 41,
+        "days_since": 42,
         "tier": 2,
         "context": "G-Check \u2014 Unknown",
         "company": "G-Check"
       },
       {
         "name": "Contact: Bolaji \u2728",
-        "days_since": 32,
+        "days_since": 33,
         "tier": 2,
         "context": "Unknown",
         "company": ""
       },
       {
         "name": "Jocelyn Onyeka",
-        "days_since": 223,
+        "days_since": 224,
         "tier": 3,
         "context": "Kiara Consult \u2014 Founder / AI Literacy Consultant",
         "company": "Kiara Consult"
       },
       {
         "name": "Jermaine Craig",
-        "days_since": 160,
+        "days_since": 161,
         "tier": 3,
         "context": "Kwanda (kwanda.co) \u2014 Founder / Brand Designer & Automation Consultant",
         "company": "Kwanda (kwanda.co)"
       },
       {
         "name": "Cherish Nelson",
-        "days_since": 121,
+        "days_since": 122,
         "tier": 3,
         "context": "Regfyl \u2014 Sales / Partnerships (pricing contact)",
         "company": "Regfyl"
       },
       {
         "name": "Tomiwa (Regfyl)",
-        "days_since": 121,
+        "days_since": 122,
         "tier": 3,
         "context": "Regfyl \u2014 CTO / Co-Founder",
         "company": "Regfyl"
@@ -678,21 +678,27 @@
     "healthy": [
       {
         "name": "Contact: Oluwaponmile Enitanwa Lucas",
-        "days_since": 7,
+        "days_since": 8,
         "tier": 1,
         "context": "Personal contact (family/close friend)"
       },
       {
         "name": "Contact: Kofi Yeboah",
-        "days_since": 3,
+        "days_since": 4,
         "tier": 1,
         "context": "COO, Mighty"
       },
       {
         "name": "Contact: Yele (Onboard)",
-        "days_since": 2,
+        "days_since": 3,
         "tier": 1,
         "context": "Onboard \u2014 Fintech executive \u2014 EMI / payments infrastructure"
+      },
+      {
+        "name": "Sade Olaniyi",
+        "days_since": 2,
+        "tier": 1,
+        "context": ""
       },
       {
         "name": "Contact: Dotun Ajala",
@@ -707,118 +713,136 @@
         "context": "Operations Lead, Mighty"
       },
       {
-        "name": "Sade Olaniyi",
-        "days_since": 1,
-        "tier": 1,
-        "context": ""
-      },
-      {
         "name": "Contact: Paul Ogungbangbe",
-        "days_since": 29,
+        "days_since": 30,
         "tier": 2,
         "context": "Ceviant"
       },
       {
         "name": "Contact: Emmanuel Ogbodo",
-        "days_since": 29,
+        "days_since": 30,
         "tier": 2,
         "context": "OhentPay (Founder/CEO?)"
       },
       {
         "name": "Contact: David Fenell",
-        "days_since": 27,
+        "days_since": 28,
         "tier": 2,
         "context": "Unknown (personal network)"
       },
       {
         "name": "Contact: Alina (DXB)",
-        "days_since": 16,
+        "days_since": 17,
         "tier": 2,
         "context": "Real estate agent / property sourcer"
       },
       {
         "name": "Contact: Paakojo (Cedi.io)",
-        "days_since": 14,
+        "days_since": 15,
         "tier": 2,
         "context": "FX Liquidity / Market Maker (Cedi.io)"
       },
       {
         "name": "Contact: Simon Waigo",
-        "days_since": 13,
+        "days_since": 14,
         "tier": 2,
         "context": "Unknown (personal network)"
       },
       {
         "name": "Contact: Rahul Singh Verma",
-        "days_since": 9,
+        "days_since": 10,
         "tier": 2,
         "context": "Unknown \u2014 compliance/regulatory advisor or partner"
       },
       {
         "name": "Contact: Steve Amara",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 2,
         "context": "Business partner / FX (Senegal/West Africa)"
       },
       {
         "name": "Basith FX",
-        "days_since": 7,
+        "days_since": 8,
         "tier": 2,
         "context": "Basith FX \u2014 Liquidity Partner"
       },
       {
-        "name": "Contact: Kene",
-        "days_since": 6,
-        "tier": 2,
-        "context": "Unknown"
-      },
-      {
         "name": "Contact: Diana Atieno",
-        "days_since": 6,
+        "days_since": 7,
         "tier": 2,
         "context": "Unknown"
       },
       {
         "name": "Contact: Olu (SendBuddy)",
-        "days_since": 6,
+        "days_since": 7,
         "tier": 2,
         "context": "SendBuddy \u2014 FX/remittance partner"
       },
       {
         "name": "Contact: Yemi Alade",
-        "days_since": 5,
+        "days_since": 6,
         "tier": 2,
         "context": ""
       },
       {
         "name": "Contact: Richard Bansah",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "context": "FX Partner / Liquidity Contact (Ghana)"
       },
       {
         "name": "Contact: Gbenga Omolokun",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "context": "Ceviant"
       },
       {
         "name": "Tommie GlobalTrader",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "context": "GlobalTrader \u2014 Liquidity Partner"
       },
       {
         "name": "Contact: Stephen (Singapore MPI)",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "context": "MPI (Singapore-based) \u2014 Unknown \u2014 business contact"
       },
       {
         "name": "Contact: Michael (UnityLink)",
-        "days_since": 3,
+        "days_since": 4,
         "tier": 2,
         "context": "FX Trader / Liquidity Partner (UnityLink)"
+      },
+      {
+        "name": "Dritan Vakaj",
+        "days_since": 2,
+        "tier": 2,
+        "context": "Montify \u2014 MLRO (Money Laundering Reporting Officer)"
+      },
+      {
+        "name": "Contact: Simon Rawlinson",
+        "days_since": 2,
+        "tier": 2,
+        "context": "Sokin"
+      },
+      {
+        "name": "Contact: Dash Adedipe",
+        "days_since": 2,
+        "tier": 2,
+        "context": "FX/Crypto trading counterpart"
+      },
+      {
+        "name": "Fatau",
+        "days_since": 2,
+        "tier": 2,
+        "context": "Liquidity Partner"
+      },
+      {
+        "name": "Contact: Richie_Smiles",
+        "days_since": 2,
+        "tier": 2,
+        "context": "GHS liquidity provider / trader"
       },
       {
         "name": "Contact: Sandra (M'Cube Pay)",
@@ -827,205 +851,212 @@
         "context": "FX / Payments (M'Cube Pay)"
       },
       {
-        "name": "Dritan Vakaj",
+        "name": "Contact: Boyin Akinlade",
         "days_since": 1,
         "tier": 2,
-        "context": "Montify \u2014 MLRO (Money Laundering Reporting Officer)"
+        "context": "Unknown"
       },
       {
-        "name": "Contact: Simon Rawlinson",
+        "name": "Contact: Kene",
         "days_since": 1,
         "tier": 2,
-        "context": "Sokin"
+        "context": "Unknown"
       },
       {
-        "name": "Contact: Dash Adedipe",
+        "name": "Contact: Oscar",
         "days_since": 1,
         "tier": 2,
-        "context": "FX/Crypto trading counterpart"
-      },
-      {
-        "name": "Fatau",
-        "days_since": 1,
-        "tier": 2,
-        "context": "Liquidity Partner"
-      },
-      {
-        "name": "Contact: Richie_Smiles",
-        "days_since": 1,
-        "tier": 2,
-        "context": "GHS liquidity provider / trader"
+        "context": "Unknown \u2014 personal friend"
       },
       {
         "name": "Ahsin Niazi",
-        "days_since": 56,
+        "days_since": 57,
         "tier": 3,
         "context": "Sokin \u2014 Unknown (senior team member)"
       },
       {
         "name": "Ayodeji Olufolahan",
-        "days_since": 45,
+        "days_since": 46,
         "tier": 3,
         "context": "TLP Advisory \u2014 Unknown (likely associate or partner)"
       },
       {
         "name": "Damilola Omosaiye",
-        "days_since": 39,
+        "days_since": 40,
         "tier": 3,
         "context": "Ceviant \u2014 Team member (operations/admin)"
       },
       {
         "name": "Contact: Brigitta Ruha",
-        "days_since": 37,
+        "days_since": 38,
         "tier": 3,
         "context": "Unknown (GTM / founder ecosystem)"
       },
       {
         "name": "Contact: Harry Crusher",
-        "days_since": 29,
+        "days_since": 30,
         "tier": 3,
         "context": "Payments industry (formerly SetHub)"
       },
       {
         "name": "Olanrewaju Onabowale",
-        "days_since": 25,
+        "days_since": 26,
         "tier": 3,
         "context": "Montify / Ceviant \u2014 Unknown (team member, operations/business)"
       },
       {
         "name": "Contact: Munir (Compliance)",
-        "days_since": 21,
+        "days_since": 22,
         "tier": 3,
         "context": "Compliance professional"
       },
       {
         "name": "Contact: Nancy Folake Quadri",
-        "days_since": 21,
+        "days_since": 22,
         "tier": 3,
         "context": "Unknown"
       },
       {
         "name": "Contact: Lloyd Adiele",
-        "days_since": 20,
+        "days_since": 21,
         "tier": 3,
         "context": "Unknown (possibly fintech \u2014 Fincode)"
       },
       {
         "name": "Contact: Mike Onyolu",
-        "days_since": 16,
+        "days_since": 17,
         "tier": 3,
         "context": "Founder \u2014 cross-border ecommerce company"
       },
       {
         "name": "Contact: Tosin Ekolie",
-        "days_since": 13,
+        "days_since": 14,
         "tier": 3,
         "context": "Unknown"
       },
       {
         "name": "Contact: Cieran Solomon",
-        "days_since": 13,
+        "days_since": 14,
         "tier": 3,
         "context": "Unknown"
       },
       {
         "name": "Contact: Daniel Jones",
-        "days_since": 11,
+        "days_since": 12,
         "tier": 3,
         "context": "IFX (International FX) \u2014 likely front office/compliance liaison"
       },
       {
         "name": "Contact: Lerato",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 3,
         "context": "Unknown"
       },
       {
         "name": "Contact: Paul Densley",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 3,
         "context": "VacuumLabs (exact role unknown - likely product/BD)"
       },
       {
         "name": "Contact: Tatiana PA",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 3,
         "context": "Personal Assistant (to whom unknown)"
       },
       {
         "name": "Contact: Khaled Sharqawi",
-        "days_since": 6,
+        "days_since": 7,
         "tier": 3,
         "context": "Private transfer service (Hurghada) \u2014 Airport Transfer Driver"
       },
       {
         "name": "Contact: Hamdi (Elwzer)",
-        "days_since": 5,
+        "days_since": 6,
         "tier": 3,
         "context": "Local contact \u2014 Hurghada"
       },
       {
         "name": "Contact: Privatehurghada",
-        "days_since": 5,
+        "days_since": 6,
         "tier": 3,
         "context": "Private Hurghada (water sports/tours) \u2014 Activity/Tour Operator"
       },
       {
         "name": "Contact: Dashmony",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 3,
         "context": "Unknown \u2014 business contact"
+      },
+      {
+        "name": "Contact: Mariusz",
+        "days_since": 1,
+        "tier": 3,
+        "context": "Unknown \u2014 new contact"
+      },
+      {
+        "name": "Contact: Mohamed Adel",
+        "days_since": 1,
+        "tier": 3,
+        "context": "Local guide / service provider in Egypt"
       }
     ],
     "all": [
       {
         "name": "Nikolai Timofejev",
-        "days_since": 127,
+        "days_since": 128,
         "tier": 1,
         "health": "cooling",
         "context": "Montify / Servians / Pre Finance \u2014 Owner / Founder"
       },
       {
         "name": "Esah Khan (also \"Issa\")",
-        "days_since": 38,
+        "days_since": 39,
         "tier": 1,
         "health": "cooling",
         "context": "Mighty \u2014 MLRO / Chief Compliance Officer"
       },
       {
         "name": "Kunle Odekunle (also \"Kabir\")",
-        "days_since": 37,
+        "days_since": 38,
         "tier": 1,
         "health": "cooling",
         "context": "Mighty \u2014 FX Trader"
       },
       {
         "name": "Contact: Benjamin W\u00fcrzburger",
-        "days_since": 25,
+        "days_since": 26,
         "tier": 1,
         "health": "cooling",
         "context": "Partner, Ceviant / CPUK"
       },
       {
         "name": "Contact: Oluwaponmile Enitanwa Lucas",
-        "days_since": 7,
+        "days_since": 8,
         "tier": 1,
         "health": "healthy",
         "context": "Personal contact (family/close friend)"
       },
       {
         "name": "Contact: Kofi Yeboah",
-        "days_since": 3,
+        "days_since": 4,
         "tier": 1,
         "health": "healthy",
         "context": "COO, Mighty"
       },
       {
         "name": "Contact: Yele (Onboard)",
-        "days_since": 2,
+        "days_since": 3,
         "tier": 1,
         "health": "healthy",
         "context": "Onboard \u2014 Fintech executive \u2014 EMI / payments infrastructure"
+      },
+      {
+        "name": "Sade Olaniyi",
+        "days_since": 2,
+        "tier": 1,
+        "health": "healthy",
+        "context": ""
       },
       {
         "name": "Contact: Dotun Ajala",
@@ -1042,270 +1073,291 @@
         "context": "Operations Lead, Mighty"
       },
       {
-        "name": "Sade Olaniyi",
-        "days_since": 1,
-        "tier": 1,
-        "health": "healthy",
-        "context": ""
-      },
-      {
         "name": "Daniel Okunlola",
-        "days_since": 206,
+        "days_since": 207,
         "tier": 2,
         "health": "cooling",
         "context": "Unknown (community / leadership space) \u2014 Entrepreneur / Community Leader"
       },
       {
         "name": "Iyinoluwa \"Eni\" Soleye",
-        "days_since": 137,
+        "days_since": 138,
         "tier": 2,
         "health": "cooling",
         "context": "Mighty / Go Mighty \u2014 Junior FX Specialist"
       },
       {
         "name": "Boye Balogun",
-        "days_since": 126,
+        "days_since": 127,
         "tier": 2,
         "health": "cooling",
         "context": "More Than Ventures \u2014 Founder / Entrepreneur"
       },
       {
         "name": "Arpit Suhalka",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "health": "cooling",
         "context": "iFAST Global Bank \u2014 Relationship Manager / Business Development"
       },
       {
         "name": "Raj Khangura",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "health": "cooling",
         "context": "Independent (Regulatory/Compliance Advisory) \u2014 Compliance Advisor / Regulatory Consultant"
       },
       {
         "name": "Manoj Padhi",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "health": "cooling",
         "context": "iFAST Global Bank \u2014 Easy Remit Platform \u2014 Head of Cross-Border Vertical"
       },
       {
         "name": "Simon Skovgaard",
-        "days_since": 109,
+        "days_since": 110,
         "tier": 2,
         "health": "cooling",
         "context": "iFAST Global Bank \u2014 Business Development Executive"
       },
       {
         "name": "Mark (Montify Germany)",
-        "days_since": 101,
+        "days_since": 102,
         "tier": 2,
         "health": "cooling",
         "context": "Montify Germany \u2014 Financial Advisor / CFO-type"
       },
       {
         "name": "Bode Bamkole",
-        "days_since": 90,
+        "days_since": 91,
         "tier": 2,
         "health": "cooling",
         "context": "Beyond Blood Motion \u2014 Founder / Elite Fitness Coach"
       },
       {
         "name": "Jason Landrum",
-        "days_since": 88,
+        "days_since": 89,
         "tier": 2,
         "health": "cooling",
         "context": "Unknown (US EMI/banking infrastructure company) \u2014 Unknown (senior business development / partnerships)"
       },
       {
         "name": "Sarah Idahosa",
-        "days_since": 86,
+        "days_since": 87,
         "tier": 2,
         "health": "cooling",
         "context": "MANSA \u2014 Partnership and Community Growth Manager"
       },
       {
         "name": "Andrei Arnautu",
-        "days_since": 73,
+        "days_since": 74,
         "tier": 2,
         "health": "cooling",
         "context": "Clear Junction \u2014 Business Development / Partnerships (sent follow-up email)"
       },
       {
         "name": "Betul Erdogan",
-        "days_since": 56,
+        "days_since": 57,
         "tier": 2,
         "health": "cooling",
         "context": "Sokin \u2014 Implementation Lead"
       },
       {
         "name": "Funkola Odeleye",
-        "days_since": 45,
+        "days_since": 46,
         "tier": 2,
         "health": "cooling",
         "context": "TLP Advisory (formerly The Lunga Practice) \u2014 Partner"
       },
       {
         "name": "Contact: Henry Longe",
-        "days_since": 43,
+        "days_since": 44,
         "tier": 2,
         "health": "cooling",
         "context": "TLP Advisory"
       },
       {
         "name": "Contact: Habeeb Ogundiran",
-        "days_since": 43,
+        "days_since": 44,
         "tier": 2,
         "health": "cooling",
         "context": "Ceviant"
       },
       {
         "name": "Contact: Callum Whittaker",
-        "days_since": 42,
+        "days_since": 43,
         "tier": 2,
         "health": "cooling",
         "context": "IFX Payments"
       },
       {
         "name": "Tola Alade",
-        "days_since": 41,
+        "days_since": 42,
         "tier": 2,
         "health": "cooling",
         "context": "G-Check \u2014 Unknown"
       },
       {
         "name": "Contact: Bolaji \u2728",
-        "days_since": 32,
+        "days_since": 33,
         "tier": 2,
         "health": "cooling",
         "context": "Unknown"
       },
       {
         "name": "Contact: Paul Ogungbangbe",
-        "days_since": 29,
+        "days_since": 30,
         "tier": 2,
         "health": "healthy",
         "context": "Ceviant"
       },
       {
         "name": "Contact: Emmanuel Ogbodo",
-        "days_since": 29,
+        "days_since": 30,
         "tier": 2,
         "health": "healthy",
         "context": "OhentPay (Founder/CEO?)"
       },
       {
         "name": "Contact: David Fenell",
-        "days_since": 27,
+        "days_since": 28,
         "tier": 2,
         "health": "healthy",
         "context": "Unknown (personal network)"
       },
       {
         "name": "Contact: Alina (DXB)",
-        "days_since": 16,
+        "days_since": 17,
         "tier": 2,
         "health": "healthy",
         "context": "Real estate agent / property sourcer"
       },
       {
         "name": "Contact: Paakojo (Cedi.io)",
-        "days_since": 14,
+        "days_since": 15,
         "tier": 2,
         "health": "healthy",
         "context": "FX Liquidity / Market Maker (Cedi.io)"
       },
       {
         "name": "Contact: Simon Waigo",
-        "days_since": 13,
+        "days_since": 14,
         "tier": 2,
         "health": "healthy",
         "context": "Unknown (personal network)"
       },
       {
         "name": "Contact: Rahul Singh Verma",
-        "days_since": 9,
+        "days_since": 10,
         "tier": 2,
         "health": "healthy",
         "context": "Unknown \u2014 compliance/regulatory advisor or partner"
       },
       {
         "name": "Contact: Steve Amara",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 2,
         "health": "healthy",
         "context": "Business partner / FX (Senegal/West Africa)"
       },
       {
         "name": "Basith FX",
-        "days_since": 7,
+        "days_since": 8,
         "tier": 2,
         "health": "healthy",
         "context": "Basith FX \u2014 Liquidity Partner"
       },
       {
-        "name": "Contact: Kene",
-        "days_since": 6,
-        "tier": 2,
-        "health": "healthy",
-        "context": "Unknown"
-      },
-      {
         "name": "Contact: Diana Atieno",
-        "days_since": 6,
+        "days_since": 7,
         "tier": 2,
         "health": "healthy",
         "context": "Unknown"
       },
       {
         "name": "Contact: Olu (SendBuddy)",
-        "days_since": 6,
+        "days_since": 7,
         "tier": 2,
         "health": "healthy",
         "context": "SendBuddy \u2014 FX/remittance partner"
       },
       {
         "name": "Contact: Yemi Alade",
-        "days_since": 5,
+        "days_since": 6,
         "tier": 2,
         "health": "healthy",
         "context": ""
       },
       {
         "name": "Contact: Richard Bansah",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "health": "healthy",
         "context": "FX Partner / Liquidity Contact (Ghana)"
       },
       {
         "name": "Contact: Gbenga Omolokun",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "health": "healthy",
         "context": "Ceviant"
       },
       {
         "name": "Tommie GlobalTrader",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "health": "healthy",
         "context": "GlobalTrader \u2014 Liquidity Partner"
       },
       {
         "name": "Contact: Stephen (Singapore MPI)",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 2,
         "health": "healthy",
         "context": "MPI (Singapore-based) \u2014 Unknown \u2014 business contact"
       },
       {
         "name": "Contact: Michael (UnityLink)",
-        "days_since": 3,
+        "days_since": 4,
         "tier": 2,
         "health": "healthy",
         "context": "FX Trader / Liquidity Partner (UnityLink)"
+      },
+      {
+        "name": "Dritan Vakaj",
+        "days_since": 2,
+        "tier": 2,
+        "health": "healthy",
+        "context": "Montify \u2014 MLRO (Money Laundering Reporting Officer)"
+      },
+      {
+        "name": "Contact: Simon Rawlinson",
+        "days_since": 2,
+        "tier": 2,
+        "health": "healthy",
+        "context": "Sokin"
+      },
+      {
+        "name": "Contact: Dash Adedipe",
+        "days_since": 2,
+        "tier": 2,
+        "health": "healthy",
+        "context": "FX/Crypto trading counterpart"
+      },
+      {
+        "name": "Fatau",
+        "days_since": 2,
+        "tier": 2,
+        "health": "healthy",
+        "context": "Liquidity Partner"
+      },
+      {
+        "name": "Contact: Richie_Smiles",
+        "days_since": 2,
+        "tier": 2,
+        "health": "healthy",
+        "context": "GHS liquidity provider / trader"
       },
       {
         "name": "Contact: Sandra (M'Cube Pay)",
@@ -1315,39 +1367,25 @@
         "context": "FX / Payments (M'Cube Pay)"
       },
       {
-        "name": "Dritan Vakaj",
+        "name": "Contact: Boyin Akinlade",
         "days_since": 1,
         "tier": 2,
         "health": "healthy",
-        "context": "Montify \u2014 MLRO (Money Laundering Reporting Officer)"
+        "context": "Unknown"
       },
       {
-        "name": "Contact: Simon Rawlinson",
+        "name": "Contact: Kene",
         "days_since": 1,
         "tier": 2,
         "health": "healthy",
-        "context": "Sokin"
+        "context": "Unknown"
       },
       {
-        "name": "Contact: Dash Adedipe",
+        "name": "Contact: Oscar",
         "days_since": 1,
         "tier": 2,
         "health": "healthy",
-        "context": "FX/Crypto trading counterpart"
-      },
-      {
-        "name": "Fatau",
-        "days_since": 1,
-        "tier": 2,
-        "health": "healthy",
-        "context": "Liquidity Partner"
-      },
-      {
-        "name": "Contact: Richie_Smiles",
-        "days_since": 1,
-        "tier": 2,
-        "health": "healthy",
-        "context": "GHS liquidity provider / trader"
+        "context": "Unknown \u2014 personal friend"
       },
       {
         "name": "Tatyana (Adorkor)",
@@ -1358,174 +1396,188 @@
       },
       {
         "name": "Jocelyn Onyeka",
-        "days_since": 223,
+        "days_since": 224,
         "tier": 3,
         "health": "cooling",
         "context": "Kiara Consult \u2014 Founder / AI Literacy Consultant"
       },
       {
         "name": "Jermaine Craig",
-        "days_since": 160,
+        "days_since": 161,
         "tier": 3,
         "health": "cooling",
         "context": "Kwanda (kwanda.co) \u2014 Founder / Brand Designer & Automation Consultant"
       },
       {
         "name": "Cherish Nelson",
-        "days_since": 121,
+        "days_since": 122,
         "tier": 3,
         "health": "cooling",
         "context": "Regfyl \u2014 Sales / Partnerships (pricing contact)"
       },
       {
         "name": "Tomiwa (Regfyl)",
-        "days_since": 121,
+        "days_since": 122,
         "tier": 3,
         "health": "cooling",
         "context": "Regfyl \u2014 CTO / Co-Founder"
       },
       {
         "name": "Ahsin Niazi",
-        "days_since": 56,
+        "days_since": 57,
         "tier": 3,
         "health": "healthy",
         "context": "Sokin \u2014 Unknown (senior team member)"
       },
       {
         "name": "Ayodeji Olufolahan",
-        "days_since": 45,
+        "days_since": 46,
         "tier": 3,
         "health": "healthy",
         "context": "TLP Advisory \u2014 Unknown (likely associate or partner)"
       },
       {
         "name": "Damilola Omosaiye",
-        "days_since": 39,
+        "days_since": 40,
         "tier": 3,
         "health": "healthy",
         "context": "Ceviant \u2014 Team member (operations/admin)"
       },
       {
         "name": "Contact: Brigitta Ruha",
-        "days_since": 37,
+        "days_since": 38,
         "tier": 3,
         "health": "healthy",
         "context": "Unknown (GTM / founder ecosystem)"
       },
       {
         "name": "Contact: Harry Crusher",
-        "days_since": 29,
+        "days_since": 30,
         "tier": 3,
         "health": "healthy",
         "context": "Payments industry (formerly SetHub)"
       },
       {
         "name": "Olanrewaju Onabowale",
-        "days_since": 25,
+        "days_since": 26,
         "tier": 3,
         "health": "healthy",
         "context": "Montify / Ceviant \u2014 Unknown (team member, operations/business)"
       },
       {
         "name": "Contact: Munir (Compliance)",
-        "days_since": 21,
+        "days_since": 22,
         "tier": 3,
         "health": "healthy",
         "context": "Compliance professional"
       },
       {
         "name": "Contact: Nancy Folake Quadri",
-        "days_since": 21,
+        "days_since": 22,
         "tier": 3,
         "health": "healthy",
         "context": "Unknown"
       },
       {
         "name": "Contact: Lloyd Adiele",
-        "days_since": 20,
+        "days_since": 21,
         "tier": 3,
         "health": "healthy",
         "context": "Unknown (possibly fintech \u2014 Fincode)"
       },
       {
         "name": "Contact: Mike Onyolu",
-        "days_since": 16,
+        "days_since": 17,
         "tier": 3,
         "health": "healthy",
         "context": "Founder \u2014 cross-border ecommerce company"
       },
       {
         "name": "Contact: Tosin Ekolie",
-        "days_since": 13,
+        "days_since": 14,
         "tier": 3,
         "health": "healthy",
         "context": "Unknown"
       },
       {
         "name": "Contact: Cieran Solomon",
-        "days_since": 13,
+        "days_since": 14,
         "tier": 3,
         "health": "healthy",
         "context": "Unknown"
       },
       {
         "name": "Contact: Daniel Jones",
-        "days_since": 11,
+        "days_since": 12,
         "tier": 3,
         "health": "healthy",
         "context": "IFX (International FX) \u2014 likely front office/compliance liaison"
       },
       {
         "name": "Contact: Lerato",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 3,
         "health": "healthy",
         "context": "Unknown"
       },
       {
         "name": "Contact: Paul Densley",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 3,
         "health": "healthy",
         "context": "VacuumLabs (exact role unknown - likely product/BD)"
       },
       {
         "name": "Contact: Tatiana PA",
-        "days_since": 8,
+        "days_since": 9,
         "tier": 3,
         "health": "healthy",
         "context": "Personal Assistant (to whom unknown)"
       },
       {
         "name": "Contact: Khaled Sharqawi",
-        "days_since": 6,
+        "days_since": 7,
         "tier": 3,
         "health": "healthy",
         "context": "Private transfer service (Hurghada) \u2014 Airport Transfer Driver"
       },
       {
         "name": "Contact: Hamdi (Elwzer)",
-        "days_since": 5,
+        "days_since": 6,
         "tier": 3,
         "health": "healthy",
         "context": "Local contact \u2014 Hurghada"
       },
       {
         "name": "Contact: Privatehurghada",
-        "days_since": 5,
+        "days_since": 6,
         "tier": 3,
         "health": "healthy",
         "context": "Private Hurghada (water sports/tours) \u2014 Activity/Tour Operator"
       },
       {
         "name": "Contact: Dashmony",
-        "days_since": 4,
+        "days_since": 5,
         "tier": 3,
         "health": "healthy",
         "context": "Unknown \u2014 business contact"
+      },
+      {
+        "name": "Contact: Mariusz",
+        "days_since": 1,
+        "tier": 3,
+        "health": "healthy",
+        "context": "Unknown \u2014 new contact"
+      },
+      {
+        "name": "Contact: Mohamed Adel",
+        "days_since": 1,
+        "tier": 3,
+        "health": "healthy",
+        "context": "Local guide / service provider in Egypt"
       }
     ],
-    "total_contacts": 78
+    "total_contacts": 82
   },
   "tasks": {
     "overdue": [
@@ -1535,7 +1587,7 @@
         "due": "2026-03-28",
         "priority": "P1",
         "assignee": "**Favour**",
-        "notes": "Kunle hostile since 24 Mar (\"wtf Kay? Is this some power trip\"). 11 unread. Returned laptop + key. Favour must process final payment independently. Delay increases legal/reputational risk."
+        "notes": "Kunle hostile since 24 Mar. 11+ unread. Returned laptop + key. Favour must process final payment independently. Delay increases legal/reputational risk."
       },
       {
         "id": "task-034",
@@ -1546,16 +1598,25 @@
         "notes": "Mar 20 compliance doc + 25 Mar email. Munir called 3 times on 26 Mar. 6 unread. Esah should review as MLRO. Only escalate to Kay if MLRO cannot resolve."
       }
     ],
-    "due_today": [],
-    "upcoming": [
+    "due_today": [
       {
         "id": "task-009",
         "name": "Dotun Ajala Onboarding \u2014 Week 1",
         "due": "2026-04-04",
         "priority": "P1",
         "assignee": "Favour (Kay on holiday)",
-        "notes": "Onboarding pack ready. Dotun joined Discord/Sankara (22 Mar), received gift book from Kay (27 Mar). Favour building her own pack (F-020 due 29 Mar). CEO Away Playbook covers delegation. Dotun's Week 1 deliverable: \"State of Product\" memo by 4 Apr. Kay \u2194 Dotun first 1:1 planned for 14 Apr."
+        "notes": "Dotun active in team channels (reacted to Kay's thank-you in DRIVE 3 Apr). Onboarding pack delivery (F-020) still unconfirmed. \"State of Product\" memo due TOMORROW (4 Apr). Kay \u2194 Dotun first 1:1 planned for 14 Apr."
       },
+      {
+        "id": "task-035",
+        "name": "Book Ghana Flight (Apr 8-10+)",
+        "due": "2026-04-04",
+        "priority": "P1",
+        "assignee": "Kay (from Hurghada)",
+        "notes": "Steve Amara confirmed Apr 8-10 in Accra. Yele confirmed Ghana 8-11 + Lagos 12-15 \u2014 trip may have expanded. Visa on arrival. Route: HRG\u2192CAI\u2192ACC (EgyptAir, ~$387-449). Trip prep pack ready. Credentials one-pager ready. 3+ meetings: Steve/Mawutor TTS pitch, Kofi new client, LP visit, Yele/Onboard team."
+      }
+    ],
+    "upcoming": [
       {
         "id": "task-030",
         "name": "Paul Densley \u2014 VacuumLabs / Join Mighty",
@@ -1569,16 +1630,8 @@
         "name": "Yele/Onboard \u2014 EMI Partnership Proposal",
         "due": "2026-04-14",
         "priority": "P1",
-        "assignee": "Kay (post-return)",
-        "notes": "Yele (Onboard) met Kay IRL at Canary Wharf 27 Mar. Fleshing out EMI proposal for Idris + Gbenga alignment. Kay committed to sharing thoughts with Yele and Gbenga. Plans to meet Yele's full team in Ghana AND Lagos in April \u2014 coordinate with Steve Amara Ghana trip (8-10 Apr). Connects to Gbenga's Verto/Griffin push. TIER 1 STRATEGIC."
-      },
-      {
-        "id": "task-035",
-        "name": "Book Ghana Flight (Apr 8-10)",
-        "due": "2026-04-04",
-        "priority": "P1",
-        "assignee": "Kay (from Hurghada)",
-        "notes": "Steve Amara confirmed Apr 8-10 in Accra. Visa on arrival. Route: HRG\u2192CAI\u2192ACC (EgyptAir, ~$387-449). Trip prep pack ready (documents/ghana-trip-prep-apr-8-10.md). Credentials one-pager ready (documents/mighty-credentials.html). 3 meetings: Steve/Mawutor TTS pitch, Kofi new GHS 2M+/day client, LP visit."
+        "assignee": "Kay (review from holiday)",
+        "notes": "Yele sent structured EMI memo on 1 Apr. Kay promised to review. Travel confirmed: Ghana 8-11 Apr, Lagos 12-15 Apr (expanded from original 8-10). Plans to meet Yele's full team in both cities. Connects to Gbenga's Verto/Griffin push. TIER 1 STRATEGIC."
       }
     ],
     "completed_count": 20
@@ -1597,7 +1650,7 @@
         "commitment": "Callback + EMI discussion",
         "to_whom": "Gbenga Omolokun",
         "deadline": "2026-03-01",
-        "status": "\ud83d\udd34\ud83d\udd34 URGENT (32d)"
+        "status": "\ud83d\udd34\ud83d\udd34 URGENT (33d)"
       },
       {
         "id": "F-012",
@@ -1611,7 +1664,7 @@
         "commitment": "Return call",
         "to_whom": "Lloyd Adiele",
         "deadline": "2026-03-06",
-        "status": "\ud83d\udd34 OVERDUE (27d)"
+        "status": "\ud83d\udd34 OVERDUE (28d)"
       },
       {
         "id": "F-014",
@@ -1632,7 +1685,7 @@
         "commitment": "Reply to TK Toks",
         "to_whom": "TK Toks",
         "deadline": "2026-03-07",
-        "status": "\ud83d\udd34 OVERDUE (26d)"
+        "status": "\ud83d\udd34 OVERDUE (27d)"
       },
       {
         "id": "F-017",
@@ -1646,21 +1699,21 @@
         "commitment": "End-of-week catch-up",
         "to_whom": "Dashmony",
         "deadline": "2026-03-13",
-        "status": "\ud83d\udd34 OVERDUE (20d)"
+        "status": "\ud83d\udd34 OVERDUE (21d)"
       },
       {
         "id": "F-019",
         "commitment": "Revert on rate",
         "to_whom": "Paakojo (Cedi.io)",
         "deadline": "2026-03-20",
-        "status": "\ud83d\udd34 OVERDUE (13d)"
+        "status": "\ud83d\udd34 OVERDUE (14d)"
       },
       {
         "id": "F-020",
         "commitment": "Product Lead onboarding pack",
         "to_whom": "Favour Ogazi",
         "deadline": "2026-03-29",
-        "status": "\ud83d\udd34 OVERDUE (4d) - UNCONFIRMED"
+        "status": "\ud83d\udd34 OVERDUE (5d) \u2014 UNCONFIRMED"
       },
       {
         "id": "F-022",
@@ -1674,28 +1727,28 @@
         "commitment": "Propose meetup time",
         "to_whom": "Diana Atieno",
         "deadline": "2026-03-21",
-        "status": "\ud83d\udd34 OVERDUE (12d)"
+        "status": "\ud83d\udd34 OVERDUE (13d)"
       },
       {
         "id": "F-023",
         "commitment": "Kunle final payment",
         "to_whom": "Kunle Odekunle",
         "deadline": "2026-03-28",
-        "status": "\ud83d\udd34 OVERDUE (5d)"
+        "status": "\ud83d\udd34 OVERDUE (6d)"
       },
       {
         "id": "F-024",
         "commitment": "Eniola Falana follow-up",
         "to_whom": "Eniola Falana",
         "deadline": "2026-03-25",
-        "status": "\ud83d\udd34 OVERDUE (8d)"
+        "status": "\ud83d\udd34 OVERDUE (9d)"
       },
       {
         "id": "F-025",
         "commitment": "Book Ghana flight",
         "to_whom": "Steve Amara",
         "deadline": "2026-04-04",
-        "status": "\ud83d\udd34 2 DAYS LEFT"
+        "status": "\ud83d\udd34\ud83d\udd34 DUE TOMORROW"
       },
       {
         "id": "F-026",
@@ -1717,6 +1770,27 @@
         "to_whom": "Dashmony",
         "deadline": "TBD",
         "status": "\ud83d\udfe1 TRACK"
+      },
+      {
+        "id": "F-029",
+        "commitment": "Reschedule meeting",
+        "to_whom": "Dritan Vakaj",
+        "deadline": "2026-04-07",
+        "status": "\ud83d\udd34 STOOD UP TWICE"
+      },
+      {
+        "id": "F-030",
+        "commitment": "Relationship repair + process fix",
+        "to_whom": "Sandra (MCube Pay)",
+        "deadline": "2026-04-04",
+        "status": "\ud83d\udd34\ud83d\udd34 P0 CRISIS"
+      },
+      {
+        "id": "F-031",
+        "commitment": "Review Yele EMI memo",
+        "to_whom": "Yele (Onboard)",
+        "deadline": "2026-04-14",
+        "status": "\ud83d\udfe1 MEMO RECEIVED"
       },
       {
         "id": "ASAP",
@@ -1746,7 +1820,7 @@
         "commitment": "Zodia switch for trading",
         "from_whom": "Dash Adedipe",
         "expected_by": "2026-03-07",
-        "status": "\ud83d\udd34 OVERDUE (26d)"
+        "status": "\ud83d\udd34 OVERDUE (27d)"
       },
       {
         "id": "R-010",
@@ -1767,21 +1841,21 @@
         "commitment": "Emergent EUR account test",
         "from_whom": "Yankey (Emergent)",
         "expected_by": "2026-03-12",
-        "status": "\ud83d\udd34 OVERDUE (21d)"
+        "status": "\ud83d\udd34 OVERDUE (22d)"
       },
       {
         "id": "R-014",
         "commitment": "GHS settlement retry",
         "from_whom": "Kofi Yeboah",
         "expected_by": "2026-03-20",
-        "status": "\ud83d\udd34 OVERDUE (13d)"
+        "status": "\ud83d\udd34 OVERDUE (14d)"
       },
       {
         "id": "R-015",
         "commitment": "Kene repayment plan",
         "from_whom": "Kene",
         "expected_by": "2026-03-31",
-        "status": "\ud83d\udd34 DEADLINE PASSED (2d) - LIKELY 3RD DEFAULT"
+        "status": "\ud83d\udd34 DEADLINE PASSED (3d) \u2014 LIKELY 3RD DEFAULT"
       },
       {
         "id": "F-001",
@@ -1938,7 +2012,7 @@
     "stalled_deals": 5,
     "overdue_tasks": 2,
     "cooling_relationships": 27,
-    "healthy_relationships": 50,
+    "healthy_relationships": 54,
     "goals_complete": 3,
     "goals_at_risk": 1,
     "goals_total": 6,
